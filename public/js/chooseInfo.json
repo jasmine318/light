@@ -1,19 +1,19 @@
 [{
-        name: '我今天没刷牙',
-        show: false
+        "name": "我今天没刷牙",
+        "show": false
       }, {
-        name: '我唱歌真好听',
-        show: false
+        "name": "我唱歌真好听",
+        "show": false
       }, {
-        name: '我喜欢朋友圈的一个人',
-        show: false
+        "name": "我喜欢朋友圈的一个人",
+        "show": false
       }, {
-        name: '我怀孕了',
-        show: false
+        "name": "我怀孕了",
+        "show": false
       }, {
-        name: '我要结婚了',
-        show: false
+        "name": "我要结婚了",
+        "show": false
       }, {
-        name: '我爱吃香菜',
-        show: false
+        "name": "我爱吃香菜",
+        "show": false
       }]
