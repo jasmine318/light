@@ -470,6 +470,10 @@ button.swiper-pagination-bullet {
     text-align:center;
     margin:0 auto;
 }
+.txtinfo img{
+    width:20px;
+    height:20px;
+}
 .tipinfo{
     display:block;
     width:100%;
