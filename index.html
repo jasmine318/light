@@ -28,7 +28,17 @@
 
         var aa=$("#marquee_c li").height();
         $("#marquee_c").height(aa);
-
+//手机特权轮播
+var swiperPhone = new Swiper('.Phonecontainer', {
+            slidesPerView :1.1,
+            observer: true,
+            loop : true,
+            autoplay:4000,
+            loopedSlides :8,
+            pagination : '.swiper-pagination',
+            paginationType : 'fraction',
+            observeParents: true
+        });
         //宽带特权轮播
         var swiperKd = new Swiper('.Kdcontainer', {
             slidesPerdiv :1.1,
@@ -90,28 +100,28 @@
             </div>
         </div>
     </div>
-    <!--特权-->
-    <div class="pribox">
-        <!--宽带特权-->
-        <div class="pricont pricont1">
-            <h3><em class="embg"></em>精选 </h3>
-            <div class="swiper-container swipercont Kdcontainer">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide ">
-                        <a href="#" class="dateitem"><img src="./public/images/2.jpg" /></a>
-                         <p>灯饰</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="dateitem"><img src="./public/images/3.jpg" /></a>
-                         <p>灯具3</p>
-                    </div>
-
+    <!--手机特权-->
+    <div class="pricont pricont2">
+        <h3><em class="embg"></em>精选</h3>
+        <div class="swiper-container swipercont Phonecontainer">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <a href="#" class="dateitem"><img src="./public/images/2.jpg" /><p>灯饰</p></a>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                    <a href="#" class="dateitem"><img src="./public/images/3.jpg" /><p>灯饰</p></a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="dateitem"><img src="./public/images/2.jpg" /><p>灯饰</p></a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="dateitem"><img src="./public/images/2.jpg" /><p>灯饰</p></a>
+                </div>
             </div>
-           
+            <div class="swiper-pagination"></div>
         </div>
     </div>
+    <!--特权-->
 </div>
 </body>
 </html>
