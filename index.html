@@ -43,14 +43,7 @@
         });
         $(function(){
             $('#maptap').click(function(){
-                console.log('qqqq')
-                $.ajax({
-                url:"https://apis.map.qq.com/uri/v1/marker?marker=coord:29.509364,120.895273;title:钜豪照明&referer=myapp",
-                type:"POST",
-                dataType: 'jsonp',  
-                success:function(re){
-                    console.log(re);
-                }
+              window.location.href='https://apis.map.qq.com/uri/v1/marker?marker=coord:29.509364,120.895273;title:钜豪照明&referer=myapp'
             });
             })
         })
