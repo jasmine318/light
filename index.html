@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="format-detection" content="telephone=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
 <script src="./public/js/jquery-1.10.2.min.js"></script>
 <script src="./public/js/swiper.min.js"></script>
 <link rel="stylesheet" href="./public/css/light.css">
@@ -39,7 +40,18 @@
             paginationType : 'fraction',//分页器样式类型(分数)，
             observeParents: true
         });
-
+        $(function(){
+            $('#maptap').click(function(){
+                $.ajax({
+                url:"https://apis.map.qq.com/uri/v1/marker?marker=coord:29.509364,120.895273;title:钜豪照明&referer=myapp",
+                type:"POST",
+                dataType: 'jsonp',  
+                success:function(re){
+                    console.log(re);
+                }
+            });
+            })
+        })
 
     });
 
@@ -62,23 +74,23 @@
     </div>
     <div class='modulebox'>
         <div class="tiphd clearfix">
-            <img src="./public/images/left1.png" class="leftimg"></img>
+            <img src="./public/images/left1.png" class="leftimg" />
             <span class="tiptxt"><span class="smalltxt">钜豪照明</span></span>
-            <img src="./public/images/right1.png" class="rightimg"></img>
+            <img src="./public/images/right1.png" class="rightimg" />
         </div>
     
-        <div class='banbox clearfix'>
-            <div class='banlist' bindtap='callPhone'>
+        <div class='banbox'>
+            <div class='banlist'>
                 <span class='tipinfo'>上门服务(一键拨号)</span>
-                <div class="txtinfo clearfix">
-                    <img src="./public/images/banicon1.png"></img>
+                <div class="txtinfo">
+                    <img src="./public/images/banicon1.png" />
                     <a class='info' href="tel:18257551965">18257551965</a>
                 </div>
             </div>
-            <div class='banlist banlist1' bindtap='mapTap'>
+            <div class='banlist banlist1' id="maptap">
                 <span class='tipinfo' >上门服务(一键导航)</span>
                 <div class="txtinfo clearfix">
-                    <img src="./public/images/banicon2.png"></img>
+                    <img src="./public/images/banicon2.png"  />
                     <span class='info info1'>五金建材市场12幢111号</span>
                 </div>
             </div>
