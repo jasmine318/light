@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-cn" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zh-cn" class="no-js"><head><meta http-equiv="Content-Type" content="span/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="divport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="format-detection" content="telephone=no">
 <script src="./public/js/jquery-1.10.2.min.js"></script>
 <script src="./public/js/swiper.min.js"></script>
@@ -14,7 +14,7 @@
         setTimeout(function(){
             var swiperTody = new Swiper('.banner_slider', {
                 initialSlide:0,
-                slidesPerView :1,
+                slidesPerdiv :1,
                 observer: true,
                 loop : true,
                 observeParents: true,
@@ -28,7 +28,7 @@
 
         //宽带特权轮播
         var swiperKd = new Swiper('.Kdcontainer', {
-            slidesPerView :1.1,
+            slidesPerdiv :1.1,
             observer: true,
             loop : true,
             loopedSlides :6,
@@ -39,40 +39,9 @@
             observeParents: true
         });
 
-        //手机特权轮播
-        var swiperPhone = new Swiper('.Phonecontainer', {
-            slidesPerView :1.1,
-            observer: true,
-            loop : true,
-            autoplay:4000,
-            loopedSlides :8,
-            pagination : '.swiper-pagination',
-            paginationType : 'fraction',
-            observeParents: true
-        });
-
-        //商家特权轮播
-        var swiperSeller = new Swiper('.Selllercontainer', {
-            slidesPerView :1.1,
-            observer: true,
-            loop : true,
-            autoplay:4000,
-            loopedSlides :4,
-            pagination : '.swiper-pagination',
-            paginationType : 'fraction',
-            observeParents: true
-        });
-    });
-
-    $(function(){
-        //文字滚动
-        $("#marquee_c").kxbdMarquee({
-			isEqual: true, direction: "up", scrollDelay: 100,loop:1,
-		});
-
-
 
     });
+
 </script>
 
 </head>
@@ -101,7 +70,7 @@
                 <span class='tipinfo'>上门服务(一键拨号)</span>
                 <div class="txtinfo clearfix">
                     <img src="../public/images/banicon1.png"></img>
-                    <span class='info'>{{phone}}</span>
+                    <span class='info'>18257551965</span>
                 </div>
             </div>
             <div class='banlist banlist1' bindtap='mapTap'>
