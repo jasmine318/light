@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="format-detection" content="telephone=no">
-<script src="./public/js/jquery-1.10.2.min.js"></script> 
+<script src="./public/js/jquery-1.10.2.min.js"></script>
 <script src="./public/js/swiper.min.js"></script>
 <link rel="stylesheet" href="./public/css/light.css">
 <link rel="stylesheet" href="./public/css/base.css">
@@ -22,10 +22,63 @@
                 pagination: '.swiper-pagination'
             });
         },1000);
+
+        var aa=$("#marquee_c li").height();
+        $("#marquee_c").height(aa);
+
+        //宽带特权轮播
+        var swiperKd = new Swiper('.Kdcontainer', {
+            slidesPerView :1.1,
+            observer: true,
+            loop : true,
+            loopedSlides :6,
+            autoplay:1000,
+            freeMode : true,//自由滑动
+            pagination : '.swiper-pagination',//分页器
+            paginationType : 'fraction',//分页器样式类型(分数)，
+            observeParents: true
+        });
+
+        //手机特权轮播
+        var swiperPhone = new Swiper('.Phonecontainer', {
+            slidesPerView :1.1,
+            observer: true,
+            loop : true,
+            autoplay:4000,
+            loopedSlides :8,
+            pagination : '.swiper-pagination',
+            paginationType : 'fraction',
+            observeParents: true
+        });
+
+        //商家特权轮播
+        var swiperSeller = new Swiper('.Selllercontainer', {
+            slidesPerView :1.1,
+            observer: true,
+            loop : true,
+            autoplay:4000,
+            loopedSlides :4,
+            pagination : '.swiper-pagination',
+            paginationType : 'fraction',
+            observeParents: true
+        });
+    });
+
+    $(function(){
+        //文字滚动
+        $("#marquee_c").kxbdMarquee({
+			isEqual: true, direction: "up", scrollDelay: 100,loop:1,
+		});
+
+
+
     });
 </script>
+
 </head>
+
 <body>
+<div class="wrap">
     <div class="swiper-container banner_slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -34,11 +87,32 @@
             <div class="swiper-slide">
                 <a href="#" class="banimg"><img src="./public/images/1.jpg" /></a>
             </div>
-            <div class="swiper-slide">
-                <a href="#" class="banimg"><img src="./public/images/2.jpg" /></a>
-            </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
+
+    <!--特权-->
+    <div class="pribox">
+        <!--宽带特权-->
+        <div class="pricont pricont1">
+            <h3><em class="embg"></em>精选 </h3>
+            <div class="swiper-container swipercont Kdcontainer">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <a href="#" class="dateitem"><img src="./public/images/2.jpg" /></a>
+                         <p>灯饰</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="dateitem"><img src="./public/images/3.jpg" /></a>
+                         <p>灯具3</p>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+           
+        </div>
+    </div>
+</div>
 </body>
 </html>
