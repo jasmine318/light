@@ -18,6 +18,35 @@ a{-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .swipercont .swiper-slide{padding-left:20px;width:80%;}
 .pricont p{color:#353535;font-size:14px;padding:0 20px;}
 
+.productlist{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow:row wrap;
+  }
+  .progoods{
+    width:45%;
+    margin-top:15px;
+    margin-left:3%;
+    position:relative;
+  }
+  .progoods image{
+    width:100%;
+    height:150px;
+  }
+  .progoods .itemname{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    color:#fff;
+    background:rgba(0,0,0,0.6);
+    text-align:center;
+    display:block;
+    font-size:15px;
+    line-height:26px;
+    height:26px;
+  }
 .modulebox{
     background:#fff;
     padding:0 17px 17px;
